@@ -1,0 +1,26 @@
+---
+- name: Install libselinux-python
+  yum:
+    name: libselinux-python
+    state: present
+  tags: system
+
+- name: change selinux mode to permissive
+  selinux:
+    policy: targeted
+    state: permissive
+  tags: system
+
+- name: Disable IPv6
+  sysctl:
+    name: net.ipv6.conf.all.disable_ipv6
+    value: 1
+    state: present
+  tags: system
+
+- name: Disable IPv6 Configuration
+  sysctl:
+    name: net.ipv6.conf.default.disable_ipv6
+    value: 1
+    state: present
+  tags: system

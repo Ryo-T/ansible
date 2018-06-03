@@ -1,0 +1,25 @@
+
+# ntp servers (general)
+ntpserver1: ntp.nict.jp
+ntpserver2: ntp1.jst.mfeed.ad.jp
+ntpserver3: ntp2.jst.mfeed.ad.jp
+
+# DNS server (general)
+nameserver1: 8.8.8.8
+nameserver2: 8.8.4.4
+
+# User
+admin_users:
+  - {
+      name: slime,
+      state: present,
+      comment: "Slime",
+      uid: "20001:",
+      password: "$6$OaVLy.ehPcKobBz1$oB7NOtYzqADwQvmsMYX4MvbJF4NXc6/QWTgsTAGu5cCj0CjYCFcKluCRVIpqFoGNWuS5e2geBOWbopPpiN47",
+      group: "netadmins",
+      groups: "wheel"
+    }
+
+
+
+

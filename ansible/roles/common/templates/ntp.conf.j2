@@ -1,0 +1,7 @@
+# 時刻同期を許可する範囲
+restrict 10.0.0.0 mask 255.255.255.0 nomodify notrap
+
+# 同期をとるサーバ
+server {{ ntpserver1 }} iburst
+server {{ ntpserver2 }} iburst
+server {{ ntpserver3 }} iburst

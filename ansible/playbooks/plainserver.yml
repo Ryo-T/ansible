@@ -1,0 +1,9 @@
+---
+###
+### common : all host listed in the inventory
+###
+- name: apply common configuration to all hosts
+  hosts: all
+
+  roles:
+    - common

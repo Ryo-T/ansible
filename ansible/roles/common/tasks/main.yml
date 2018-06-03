@@ -1,0 +1,9 @@
+---
+# task list
+
+- include: system.yml
+- include: ntp.yml
+- include: resolv.yml
+- include: users.yml
+
+
