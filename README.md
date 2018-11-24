@@ -31,18 +31,18 @@ $ ansible -m ping localhost
 
 # 構文チェック
 ```
-$ ansible-playbook -i hosts simple-playbook.yml --syntax-check
+$ ansible-playbook site.yml --syntax-check
 ```
 # dry-run
 ```
-$ ansible-playbook -i production -vv site.yml -T 15 -D --tags=hosts --check
+$ ansible-playbook -vv site.yml -T 15 -D --tags=hosts --check
 ```
 # 実行
 ```
-$ ansible-playbook -i production -vv site.yml -T 15 -D --tags=hosts
+$ ansible-playbook -vv site.yml -T 15 -D --tags=hosts
 ```
 
-■オプション説明
+■オプション説明  
 ?-i INVENTORY, --inventory-file=INVENTORY 
 	?インベントリファイルを指定する(デフォルトは /etc/ansible/hosts)
 
