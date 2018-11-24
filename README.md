@@ -24,6 +24,11 @@ ansible 2.5.3
 ```
 
 ■コマンド例
+# 疎通チェック
+```
+$ ansible -m ping localhost
+```
+
 # 構文チェック
 ```
 $ ansible-playbook -i hosts simple-playbook.yml --syntax-check
